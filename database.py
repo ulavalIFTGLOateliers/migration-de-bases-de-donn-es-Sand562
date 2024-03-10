@@ -16,11 +16,11 @@ class Database:
         os.environ.get("VAR1")  #rajout par moi
         os.environ.get("VAR2")  #rajout par moi
 
-        self.host = "127.0.0.1"
-        self.port = int("3306")  #changer le string en int, rajout par moi
-        self.database = "atelier_bd"
-        self.user = "root"
-        self.password = "Charly3683"
+        self.host = os.environ.get("HOST")
+        self.port = int(os.environ.get("PORT"))
+        self.database = os.environ.get("atelier_bd")
+        self.user = os.environ.get("user")
+        self.password = os.environ.get("password")
 
         self._open_sql_connection()
 
